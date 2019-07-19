@@ -1,3 +1,41 @@
 h1 {
-    color: purple;
+    color: darkturquoise;
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+    color: turquoise;
+}
+body{
+    background-color: yellowgreen;
+    background-image: url("../imgs/dark-paths/dark-paths.jpeg");
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+ul{
+    list-style-type: square;
+}
+ol {
+    list-style-type: lower-roman;
+}
+table, th, td, tr{
+    padding: 10px;
+    font-size: 35px;
+    border: 5px solid mediumpurple;
+    border-collapse: collapse;
+
+}
+a:hover{
+    font-size:larger;
+}
+p{
+    text-align: center;
+}
+img{
+    height: 400px;
+    width: 500px;
+
+}
+em{
+    font-size: medium;
 }
