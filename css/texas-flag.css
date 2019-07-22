@@ -1,0 +1,33 @@
+.boxed{
+    border: 1px solid black;
+    width: 193px;
+    height: 343px;
+    background-color: rgb(1, 31,108);
+    position: absolute;
+}
+.boxed1{
+    border: 1px solid black;
+    width: 490px;
+    height: 175px;
+    background-color: white;
+    position: absolute;
+    left: 203px;
+
+}
+.boxed2 {
+    border: 1px solid black;
+    width: 490px;
+    height: 176px;
+    background-color: red;
+    position: absolute;
+    top: 175px;
+    left: 203px;
+}
+.star{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 57px;
+    top: 100px;
+}
+
