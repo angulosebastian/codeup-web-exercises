@@ -1,0 +1,23 @@
+
+.nav-item{
+    list-style-type: none;
+    float:left;
+    padding: .25em;
+    float: left;
+    position: relative;
+    top: -50px;
+    left: 900px;
+    font-size: larger;
+    font-weight: bold;
+
+}
+.boxed{
+    width: auto;
+    height: 100px;
+    background-color: grey;
+    position: inherit;
+}
+.nav-link{
+    --main-link-color: white;
+    --link-color: white;
+}
