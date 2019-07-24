@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: rgb(193,193,193);
+    z-index: 1;
+
+
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 .5em;
+}
+.logo{
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 .2em;
+    margin: auto;
+}
+li{
+    font-family: 'Work Sans', sans-serif;
+
+}
