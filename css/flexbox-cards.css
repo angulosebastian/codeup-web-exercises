@@ -73,7 +73,8 @@ a {
 }
 
 .card {
-    flex-basis: 100%;
+    flex-basis: 100%
+;
     /* This is a flex item */
 
 }
