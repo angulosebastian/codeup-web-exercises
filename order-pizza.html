@@ -94,36 +94,68 @@
             <br>
             <div class="card">
                 <div class="card-header">Sauce</div>
-                <div class="card-body">What type?
-                    <div class="form-group">
-                        <select class="form-control">
-                            <option>Tomato sauce</option>
-                            <option>Marinara sauce</option>
-                            <option>BBQ sauce</option>
-                            <option>Alfredo sauce</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="card-body">How much?
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        What type?
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Tomato sauce</option>
+                                <option>Marinara sauce</option>
+                                <option>BBQ sauce</option>
+                                <option>Alfredo sauce</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        How much?
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
 
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option>light</option>
-                                    <option>Normal</option>
-                                    <option>Extra</option>
-                                </select>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
-            <div class="btn-group" role="group" aria-label="...">Previous Step</div>
-            <div class="btn-group btn-group-lg" role="group" aria-label="...">Next Step</div>
-
-
+            <div class="btn-group">
+                <button class="btn btn-primary">Previous Step</button>
+                <button class="btn btn-success">Next Step</button>
+            </div>
         </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">Choose toppings</div>
+        <div class="card-body">
+            <div class="card-header">Choose meats</div>
+            <div class="card-body">
+                <ul>
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox" .>
+                            <input type="checkbox" name="meat1" value="beef">Beef
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="meat2" value="ham">Ham
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="meat3" value="Philly steak"> Philly Steak
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="meat4" value="bacon">Bacon
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 </main>
