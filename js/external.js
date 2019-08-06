@@ -13,3 +13,13 @@ var dailycost= prompt( 'how much does it cost to rent dialy?');
 console.log('the user entered'+ dailycost);
 alert('total cost is '+(littlemermaid + brotherbear+ hercules)* dailycost )
 //break//
+var googleHourlyRateDollars = prompt ;
+var amazonHourlyRateDollars ;
+var facebookHourlyRateDollars;
+var googleHours;
+var amazonHours;
+var facebookHours;
+var totalPayment;
+totalPayment = googleHours * googleHourlyRateDollars;
+totalPayment += amazonHours * amazonHourlyRateDollars;
+totalPayment += facebookHours * facebookHourlyRateDollars;
