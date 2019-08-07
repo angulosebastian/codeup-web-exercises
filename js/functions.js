@@ -11,6 +11,7 @@ function sayHello(name) {
     return "Hello, " + name;
 
 }
+
 console.log(sayHello("codeup"));
 
 /**
@@ -21,15 +22,15 @@ console.log(sayHello("codeup"));
  * console.log 'helloMessage' to check your work
  */
 var helloMessage = sayHello("sebastian");
- console.log(helloMessage);
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = sayHello("Sebastian");
-console.log(myName);
+var myName = "Sebastian";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -52,14 +53,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number){
-    return number == 2;
-
+function isTwo(number) {
+    return number === 2;
 
 
 }
-console.log(isTwo(2));
 
+console.log(isTwo(2));
+console.log(isTwo(random), "random boolean");
 
 /**
  * TODO:
@@ -82,13 +83,15 @@ console.log(isTwo(2));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTip(percentage1, bill){
-var bill = prompt("how much was the bill?");
-var percentage1 = prompt("how much do you want to tip?");
-return alert ("you should tip " + bill * percentage1);
+function calculateTip(percentage1, bill) {
+    var bill = prompt("how much was the bill?");
+    var percentage1 = prompt("how much do you want to tip?");
+    return alert("you should tip " + bill * percentage1);
 
 }
+
 calculateTip()
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -103,7 +106,8 @@ calculateTip()
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(original, discount){
+function applyDiscount(original, discount) {
     return original - (original * discount);
 }
+
 console.log(applyDiscount(20, .2))
