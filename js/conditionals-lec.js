@@ -17,15 +17,15 @@
 //     alert(pizzaPreference + " isn't my favorite, but let's order some!");
 // }
 
-// var lights = prompt('what color is the light');
-//
-// if (lights === "red"){
-//     alert("stop");
-// } else if (lights === "yellow"){
-//     alert("slow down");
-// } else if(lights === "green"){
-//     alert("Go!!");
-// }
+var lights = prompt('what color is the light');
+
+if (lights === "red"){
+    alert("stop");
+} else if (lights === "yellow"){
+    alert("slow down");
+} else if(lights === "green"){
+    alert("Go!!");
+}
 
 // function evaluateTrafficLight(lightColor){
 //     if(lightColor === "green") {
