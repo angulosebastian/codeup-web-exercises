@@ -1,7 +1,7 @@
 /**Heather is wanting to join an after school club. She is currently involved with another club at school, but luckily all after
 school clubs will only meet on one day out of the week. Return a string to Heather as to whether or not she can join another
 club.**/
-
+function
 
 /**Rodrigo is a chef, and needs to buy food for his restaurant. He's worked out a deal with the shop and can get his food for a
 twenty percent discount, but the shop changes their prices from week to week. Rodrigo needs to buy tofu, lamb, and potatoes.

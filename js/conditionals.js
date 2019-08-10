@@ -15,19 +15,19 @@
  *
  * Can you refactor your code to use functions?
  */
-// confirm("Would you like to enter a number?");
-// var result = prompt("Put a number ");
-//     if (result % 2 === 0) {
-//         alert("Your number is Even");
-//     } else {
-//         alert("Your number is Odd")
-// }
-// alert(parseInt(result)+ 100);
-// if (result > 0) {
-//     alert(" Your number is positive")
-// } else {
-//     alert("your number is negative")
-// }
+confirm("Would you like to enter a number?");
+var result = prompt("Put a number ");
+    if (result % 2 === 0) {
+        alert("Your number is Even");
+    } else {
+        alert("Your number is Odd")
+}
+alert(parseInt(result)+ 100);
+if (result > 0) {
+    alert(" Your number is positive")
+} else {
+    alert("your number is negative")
+}
 
 
 /* ########################################################################## */
@@ -49,20 +49,20 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// function analyzeColor(colorName){
-//     if (colorName === "blue"){
-//        return  "blue is the color of the sky."
-//     }else if (colorName === "red"){
-//         return "strawberries are red"
-//     }else if (colorName === "cyan"){
-//         return "i don't know anything about cyan"
-//     }else{
-//         return "i dont know really"
-//     }
-// }
-// var colorName = prompt("whats your favorite color?")
-//
-// alert(analyzeColor(colorName))
+function analyzeColor(colorName){
+    if (colorName === "blue"){
+       return  "blue is the color of the sky."
+    }else if (colorName === "red"){
+        return "strawberries are red"
+    }else if (colorName === "cyan"){
+        return "i don't know anything about cyan"
+    }else{
+        return "i dont know really"
+    }
+}
+var colorName = prompt("whats your favorite color?")
+
+alert(analyzeColor(colorName))
 
 
 // Don't change the next two lines!
@@ -77,42 +77,42 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
-// function randomColor(colors){
-//
-// }
-//
-// console.log(randomColor)
+function randomColor(colors){
+
+}
+
+console.log(randomColor)
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
-// switch(randomColor) {
-//     case "red":
-//         alert("red");
-//         break;
-//     case "orange":
-//         alert("orange");
-//         break;
-//     case "yellow":
-//         alert("yellow");
-//         break;
-//     case "green":
-//         alert("green");
-//         break;
-//     case "blue":
-//         alert("blue");
-//         break;
-//     case "indigo":
-//         alert ("indigo");
-//         break;
-//     case "violet":
-//         alert ("violet");
-//         break;
-// }
-// console.log(randomColor)
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+switch(randomColor) {
+    case "red":
+        alert("red");
+        break;
+    case "orange":
+        alert("orange");
+        break;
+    case "yellow":
+        alert("yellow");
+        break;
+    case "green":
+        alert("green");
+        break;
+    case "blue":
+        alert("blue");
+        break;
+    case "indigo":
+        alert ("indigo");
+        break;
+    case "violet":
+        alert ("violet");
+        break;
+}
+console.log(randomColor)
 
 /**
  * TODO:
@@ -120,9 +120,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// var colorName = prompt("whats your favorite color?")
-//
-// alert(analyzeColor(colorName))
+var colorName = prompt("whats your favorite color?")
+
+alert(analyzeColor(colorName))
 /* ########################################################################## */
 
 /**
@@ -147,29 +147,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 var luckyNumber = Math.floor(Math.random() * 6);
-// function calculateTotal(luckyNumber){
-//     switch (luckyNumber){
-//         case 0:
-//             return "0";
-//             break;
-//         case 1:
-//             return "10% discount";
-//             break;
-//         case 2:
-//             return "25% discount";
-//             break;
-//         case 3:
-//             return "35% discount";
-//             break;
-//         case 4:
-//             return "50% discount";
-//             break;
-//         case 5:
-//             return "It's free!";
-//             break;
-//     }
-// }
-// console.log(calculateTotal(luckyNumber))
+function calculateTotal(luckyNumber){
+    switch (luckyNumber){
+        case 0:
+            return "0";
+            break;
+        case 1:
+            return "10% discount";
+            break;
+        case 2:
+            return "25% discount";
+            break;
+        case 3:
+            return "35% discount";
+            break;
+        case 4:
+            return "50% discount";
+            break;
+        case 5:
+            return "It's free!";
+            break;
+    }
+}
+console.log(calculateTotal(luckyNumber))
 
 
 /**
