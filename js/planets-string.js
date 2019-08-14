@@ -28,7 +28,7 @@
     console.log(breaktag);
 
 
-    var listname = "<ul>" + "<li>" + planetsArray.join('<li>');
+    var listname = "<ul>" + "<li>" + planetsArray.join('<li>') + "</ul>";
     console.log(listname);
 
 
