@@ -11,12 +11,21 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = new Object();
-    console.log(person);
-    person.firstName = "Sebastian";
+        // var person = new Object();
+        // console.log(person);
+        // person.firstName = "Sebastian";
+        // console.log(person.firstName);
+        // person.lastname = "Angulo";
+        // console.log(person.lastname);
+    var person = {
+            firstName: "Sebastian",
+            lastName: "Angulo"
+        };
+
+
     console.log(person.firstName);
-    person.lastname = "Angulo";
-    console.log(person.lastname);
+    console.log(person.lastName);
+
 
     /**
      * TODO:
@@ -27,10 +36,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    sayHello()
+    sayHello();
 
     function sayHello() {
-        var message = "hello from " + person.firstName + " " + person.lastname + "!"
+        var message = "hello from " + person.firstName + " " + person.lastName + "!";
         return message
     }
 
@@ -151,6 +160,7 @@
         console.log("book #" + (1 + i))
         console.log(books[i].title);
         console.log(books[i].author.firstName + " " + books[i].author.lastName);
+        console.log(" --- ")
     }
 
 
@@ -164,10 +174,19 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(input1, input2, input3){
 
-
-
+    function createAuthor(firstName, lastName){
+        return{
+            firstName: firstName,
+            lastName: lastName
+        }
     }
+    function createBook(title,author){
+        return{
+            title: title,
+            author: author
+        }
+    }
+    books.push(createBook("garfield gains weight", createAuthor("Jim","Davis")));
 
 })();
