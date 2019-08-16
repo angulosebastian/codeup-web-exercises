@@ -25,40 +25,61 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">click me!</button>
+<button id="btn2">click me!</button>
+<button id="btn3">click me!</button>
+<button id="btn4">click me!</button>
+
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header") ;
+        var mainHeader = document.getElementById("main-header");
         console.log("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool";
+        var listener = function (event) {
+            mainHeader.innerHTML = "Javascript is Cool";
+
+        };
+        document.getElementById('btn1').addEventListener('click', listener, false);
+
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color= 'blue';
+        var one= function(event){
+        subHeader.style.color = 'blue';
+
+        };
+        document.getElementById('btn2').addEventListener('click',one, false);
 
         // TODO: Uncomment the next line and get all list items
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
-        var listItems = document.getElementsByTagName('li') ;
+        var listItems = document.getElementsByTagName('li');
 
-        for (var i = 0; i < listItems.length; i++){
-            var dbId= listItems[i++].getAttribute("data-dbid");
+        var two = function (event){
+        for (var i = 0; i < listItems.length; i++) {
+            var dbId = listItems[i++].getAttribute("data-dbid");
             console.log(dbId);
         }
         listItems[0].style.color = 'blue';
         // listItems.style.color ='grey';
-
+        };
+        document.getElementById('btn3').addEventListener('click', two, false);
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
-        console.log(subParagraphs)
+        console.log(subParagraphs);
+        var three= function(event){
+        subParagraphs[0].innerText = "Mission Accomplished!";
+        };
+        document.getElementById('btn4').addEventListener('click', three, false)
+
+
     })();
 </script>
 </body>
