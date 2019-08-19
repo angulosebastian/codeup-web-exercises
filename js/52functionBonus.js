@@ -216,8 +216,10 @@
 
 // - Make a function named isTruthy(input) // remember that values other than true will behave like true. you may
 // need to lookup truthy/falsy values in JavaScript
+function isTruthy(input){
 
-
+}
+console.log(isTruthy())
 
 
 
