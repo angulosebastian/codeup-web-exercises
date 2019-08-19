@@ -16,24 +16,20 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 15,
+        zoom: 8,
         center: [-98.4916, 29.4260]
     });
-    // var marker = new mapboxgl.Marker()
-    //     .setLngLat([-98.4916, 29.4260])
-    //     .addTo(map);
-    // var popup = new mapboxgl.Popup()
-    //     .setHTML("<p>Codeup Rocks!</p>")
-    //     .addTo(map);
-    //
-    // marker.setPopup(popup);
-
-    geocode("Paris, Texas", mapboxToken).then(function(result){
+    geocode("Whitefish, Montana", mapboxToken).then(function(result){
         map.jumpTo({center: result});
+    });
+    reverseGeocode({lng: -157.8060, lat: 21.2620}, mapboxToken).then(function(result){
+            //Diamond Head State Monument, off Diamond Head Rd., Honolulu, Hawaii 96816, United States
+        console.log(result);
     })
 
 
-</script>
 
+
+</script>
 </body>
 </html>
