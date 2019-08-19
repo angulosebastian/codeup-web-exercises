@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<div id='map' style='width: 100%; height: 800px;'></div>
+<script src="keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = mapbox2;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 15,
+        center: [-98.4916, 29.4260]
+    });
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4916, 29.4260])
+        .addTo(map);
+    var popup = new mapboxgl.Popup()
+        .setHTML("<p>Codeup Rocks!</p>")
+        .addTo(map);
+
+    marker.setPopup(popup);
+
+
+</script>
+
+</body>
+</html>
