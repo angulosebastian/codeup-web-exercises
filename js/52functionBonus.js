@@ -216,14 +216,28 @@
 
 // - Make a function named isTruthy(input) // remember that values other than true will behave like true. you may
 // need to lookup truthy/falsy values in JavaScript
-function isTruthy(input){
 
-}
-console.log(isTruthy())
-
+    // function isTruthy(input){
+    //     if (!!input === true){
+    //         return true;
+    //     }
+    // }
+    // console.log(isTruthy(3));
 
 
 // - Make a function named isFalsy(input) // remember that values other than false behave like false
+
+    // function isFalsy(input){
+    //     if (!!input === false){
+    //         return true;
+    //     }else{
+    //         return false
+    //     }
+    // }
+    // console.log(isFalsy(""));
+
+
+
 // - Make a function named isVowel(letter)
 // - Make a function named isConsonant(letter)
 // - Make a function named isCapital(letter)
