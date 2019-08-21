@@ -4,16 +4,17 @@
 
 // - Make a function named isNumeric(input) that returns if the input is a number like 5 or 2.3 or a string containing
 // only a number like "2". Example isNumeric(3) is - true. isNumeric("banana") should return false.
-//     function isNumeric(input){
-//         if (parseFloat(input)){
-//             return true
-//         }else{
-//             return false
-//         }
-//     };
-//     console.log(isNumeric(3));
-//     console.log(isNumeric("banana"))
-//     console.log(isNumeric('34'))
+    function isNumeric(input){
+        if (!input === !NaN){
+            return true
+        }else{
+            return false
+        }
+    };
+    console.log(isNumeric(0));
+    console.log(isNumeric(1))
+    // console.log(isNumeric("banana"))
+    // console.log(isNumeric('34'))
 
 
 //     - Make a function named isEqual(input1, input2) that returns if both inputs have the same value. areEqual
@@ -270,5 +271,9 @@
 // - Make a function named or(predicate1, predicate2) that returns the logical operation of OR
 // - Write a function called reverseString(string) that reverses a string
 // - Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and - including the number of sides.
+
+
+
+
 
 }());
