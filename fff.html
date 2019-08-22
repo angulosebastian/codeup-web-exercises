@@ -13,34 +13,34 @@
     //TODO: Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
 
 
-    // var testInput = ["fred", true, 5, 3];
-    //
-    // function filterNumbers(input) {
-    //     var output = [];
-    //     for (var i = 0; i < input.length; i += 1) {
-    //         if (typeof input[i] === "number") {
-    //             output.push(input[i]);
-    //         }
-    //     }
-    //     output.sort();
-    //     return output;
-    // }
-    //
-    // console.log(filterNumbers(testInput));
-    // function filterNumbers (arrayOfData){
-    //     var newArray=[];
-    //
-    //     arrayOfData.forEach(function(data){
-    //         if(typeof data === "number"){
-    //             console.log(data);
-    //             newArray.push(data);
-    //
-    //         };
-    //     });
-    //     return newArray.sort()
-    // }
-    // filterNumbers(testInput);
-    // console.log(filterNumbers(testInput));
+    var testInput = ["fred", true, 5, 3];
+
+    function filterNumbers(input) {
+        var output = [];
+        for (var i = 0; i < input.length; i += 1) {
+            if (typeof input[i] === "number") {
+                output.push(input[i]);
+            }
+        }
+        output.sort();
+        return output;
+    }
+
+    console.log(filterNumbers(testInput));
+    function filterNumbers (arrayOfData){
+        var newArray=[];
+
+        arrayOfData.forEach(function(data){
+            if(typeof data === "number"){
+                console.log(data);
+                newArray.push(data);
+
+            };
+        });
+        return newArray.sort()
+    }
+    filterNumbers(testInput);
+    console.log(filterNumbers(testInput));
 
 
     // ------------- PRACTICE 2
@@ -50,43 +50,48 @@
     //2. takes an array --> parametr and we have to loop
     //3. .age + 1
 
-    // var dogs = [
-    //     {
-    //         name: "Chompers",
-    //         breed: "Pug",
-    //         age: 7
-    //     },
-    //     {
-    //         name: "Freddy",
-    //         breed: "Lab",
-    //         age: 4
-    //     },
-    //     {
-    //         name: "Mr. Pig",
-    //         breed: "Mastif",
-    //         age: 10
-    //     }
-    // ];
-    //
-    // function getOlder(ArrayOfDogs){
-    //     ArrayOfDogs.forEach(function(dog){
-    //         // or dog.age = dog.age + 1
-    //         dog.age +=1;//this one is more common in work force
-    //     });
-    //     return ArrayOfDogs;
-    //
-    // }
-    //
-    // console.log(getOlder(dogs));;
+    var dogs = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+    function getOlder(arrayOfdogs){
+        arrayOfdogs.forEach(function(dog){
+            dog.name.
+        })
+    }
 
-    // function getOlder(dogs) {
-    //     for (var i = 0; i < dogs.length; i += 1) {
-    //         dogs[i].age += 1;
-    //     }
-    //     return dogs;
-    // }
-    //
-    // console.log(getOlder(dogs));
+    function getOlder(ArrayOfDogs){
+        ArrayOfDogs.forEach(function(dog){
+            // or dog.age = dog.age + 1
+            dog.age +=1;//this one is more common in work force
+        });
+        return ArrayOfDogs;
+
+    }
+
+    console.log(getOlder(dogs));;
+
+    function getOlder(dogs) {
+        for (var i = 0; i < dogs.length; i += 1) {
+            dogs[i].age += 1;
+        }
+        return dogs;
+    }
+
+    console.log(getOlder(dogs));
 
 
     // ------------- PRACTICE 3
@@ -262,6 +267,19 @@
         "tuna"
     ];
 
+//     function makeSandwichObject(breads, fillings){
+//         var sandwichArray = [];
+//
+//         for(var i = 0; i< breads.length; i++){
+//             var sandwichObject = {};
+//             sandwichObject.breads = breads[i];
+//             sandwichObject.fillings = fillings[i];
+//
+//             sandwichArray.push(sandwichObject)
+//         }
+//        return sandwichArray
+//     }
+// console.log(makeSandwichObject(breads,fillings))
     function makeSandwichObject(breads, fillings){
         var sandwichArray = [];
 
@@ -272,10 +290,9 @@
 
             sandwichArray.push(sandwichObject)
         }
-       return sandwichArray
+        return sandwichArray
     }
-console.log(makeSandwichObject(breads,fillings))
-
+    console.log(makeSandwichObject(breads,fillings))
 
 
 
