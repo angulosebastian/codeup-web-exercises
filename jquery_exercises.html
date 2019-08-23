@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.2.4.js"></script>
+
+</head>
+<body>
+
+
+
+<h1 id="content">Some content</h1>
+
+<p class="Codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum, dolore, eligendi inventore modi, molestiae natus
+    numquam odio officia officiis placeat quaerat quam qui repudiandae sint soluta totam. Quaerat, soluta?</p>
+
+<ul id="listitems">some list items
+    <li class="Codeup">list item</li>
+    <li class="Codeup">List item</li>
+</ul>
+
+<div class="Codeup">I dont know what to put here</div>
+
+<script>
+
+    $(document).ready(function() {
+    alert( 'The DOM has finished loading!' );
+    });
+        $('#content').ready(function(){
+            alert("contents are selected")
+        });
+        $('#listitems').ready(function(){
+            alert('listed items are selected')
+        })
+    $('.Codeup').css('border','1px solid red');
+    $('li').css('font-size', '20px')
+    $('h1, p ,li').css('background-color', 'yellow');
+    $('h1').ready(function(){
+        alert("h1 is alerted")
+    });
+
+
+
+</script>
+</body>
+</html>

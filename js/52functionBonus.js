@@ -48,14 +48,14 @@
 //     console.log(not(true));
 
 // - Make a function named isOdd(number) that returns true if the number is odd
-//     function isOdd(input){
-//         if (input % 2 === 0){
-//             return false
-//         }else{
-//             return true
-//         }
-//     }
-//     console.log(isOdd(3))
+    function isOdd(input){
+        if (input % 2 === 0){
+            return false
+        }else{
+            return true
+        }
+    }
+    console.log(isOdd(3))
 
 
 
