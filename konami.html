@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<div class="game"></div>
+<div class="ironMan"></div>
+<div class="audio"></div>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+
+
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+    var userCode = " ";
+    var ir = " ";
+    var free = "";
+    var book = "";
+
+    //
+    // code should be ('38,38,40,40,37,39,37,39,66,65,13')
+    $(document).keyup(function(input){
+        var code = event.keyCode;
+         userCode = userCode + code.toString();
+         console.log(userCode);
+        if (userCode.includes('3838404037393739666513')){
+            alert ('You have 30 lives!');
+            userCode =  "";
+            $('.game').html('<img src="imgs/maxresdefault.jpg" />')
+
+        }
+    });
+    $(document).keyup(function(input){
+        var ironman = event.keyCode;
+        ir = ir + ironman.toString();
+        if (ir.includes('82738013')){
+            ir = "";
+            $('.ironMan').html('<img src="imgs/original.gif" width=100% height=100% />')
+        }
+    });
+    $(document).keyup(function(input){
+        var free1 = event.keyCode;
+        free= free + free1.toString();
+        if(free.includes('70826969328269657632698384658469')){
+            $('h1').css('display','none'),
+            $('.audio').html('<audio autoplay src="audio/its-free-real-estate_tBCvCpw (1).mp3" ></audio>');
+            $('.game').html('<img src= "imgs/WHefBw.gif" width=100% height=20%>')
+
+        }
+
+    });
+    $(document).keyup(function(input){
+        var book1 = event.keyCode;
+        book= book +book1.toString();
+        if(book.includes('69696913')){
+            $('h1').css('display','none'),
+                $('.game').html('<video width=100% height=vh autoplay src="imgs/Mesothelioma_commercial.mp4"></video>')
+
+        }
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
