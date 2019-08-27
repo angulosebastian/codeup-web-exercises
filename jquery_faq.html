@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>10 FAQ of Parks</title>
     <style>
-        .invisible{
+        .invisible {
             visibility: hidden;
         }
     </style>
@@ -14,17 +14,23 @@
 
 <dl>
     <dt>1.How old is the National Park System?</dt>
-    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. </dd>
+    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August
+        25, 1916.
+    </dd>
     <dt>2.How many people visit the national parks?</dt>
     <dd class="invisible">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
     <dt>3.Can i bring my pet to a national park?</dt>
-    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities</dd>
+    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in
+        some lodging facilities
+    </dd>
     <dt>4. Can i bring my service dog to a national park?</dt>
     <dd class="invisible">Yes, service dogs are legally permitted anywhere in a park that visitors can go</dd>
     <dt>5. Who is the director of the national parks?</dt>
     <dd class="invisible">Dan Smith</dd>
     <dt>6. What government agency oversees the national park service?</dt>
-    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing
+        its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.
+    </dd>
     <dt>7.How many employees are in the national park service?</dt>
     <dd class="invisible">More than 20,000</dd>
     <dt>8. How many people volunteer?</dt>
@@ -37,14 +43,15 @@
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
+    $(document).ready(function () {
+        $('dt').click(function () {
+            $('dd').toggleClass('invisible')
+        });
+        $('dt').click(function () {
+            $(this).css('background-color', 'yellow')
+        })
 
-    $('dt').click(function(){
-        $('dd').toggleClass('invisible')
-    })
-
-
-
-
+    });
 
 
 </script>
