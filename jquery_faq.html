@@ -40,18 +40,66 @@
     <dt>10. Whats the largest national park site?</dt>
     <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK at 13.2 million acres.</dd>
 </dl>
+<input type="button" id='button' value="Click me!">
+<h2>Facts about some of the parks:</h2>
+<h3>Zion National Park</h3>
+<ul>
+    <li>Before it was a national park, Zion was a national monument, and it’s name wasn’t Zion.</li>
+    <li> Zion is home to one of the greatest engineering feats of modern times.</li>
+    <li>Zion’s Angels Landing provides spectacular views, but it’s one of the world’s most dangerous.</li>
+    <li>Zion Canyon is continually changing.</li>
+</ul>
+<h3>Arches National Park</h3>
+<ul>
+    <li>It contains the highest density of natural arches in the world.</li>
+    <li>About 300 million years ago an inland sea covered what is now Arches National Park. The sea evaporated and re-formed 29 times in all, leaving behind salt beds thousands of feet thick.</li>
+    <li>There are more than 2000 natural sandstone arches located in Arches National Park, which is the inspiration for the park's name.</li>
+    <li>Delicate Arch is the most famous and recognized arch in Arches National Park. It is also a symbol of the state of Utah.</li>
+</ul>
+<h3>Sequoia National Park</h3>
+<ul>
+    <li>Much of the population of Native American people that lived in the region when the European settlers arrived was wiped out because of smallpox.</li>
+    <li>The most massive tree in the world - the General Sherman Tree - is located in the Giant Forest in Sequoia National Park.</li>
+    <li>The majority of Sequoia National Park, much like Kings Canyon National Park, is only accessible on horseback or on foot.</li>
+    <li>As many as 1.5 million people visit Sequoia National Park each year.</li>
+</ul>
+
+
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
     $(document).ready(function () {
+        //Attribute Methods:
+
         $('dt').click(function () {
             $('dd').toggleClass('invisible')
         });
         $('dt').click(function () {
             $(this).css('background-color', 'yellow')
+        });
+
+        //Traversing Methods:
+
+        $('#button').click(function(){
+            $('ul').each(function(){
+                $(this).children('li').last().css("background","yellow")
+
+            })
+        });
+        $('h3').click(function(){
+            $('ul').each(function(index){
+                $(this).children('li').css('font-weight','bold')
+            })
+        });
+        $('li').click(function(){
+            $('li').parent().first().children('li').first().css('color','blue');
         })
 
+
+
+
     });
+
 
 
 </script>
