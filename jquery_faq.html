@@ -92,7 +92,7 @@
             })
         });
         $('li').click(function(){
-            $('li').parent().first().children('li').first().css('color','blue');
+            $(this).parent().children().first().css('color','blue');
         })
 
 
