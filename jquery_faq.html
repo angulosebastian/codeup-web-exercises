@@ -10,6 +10,11 @@
     </style>
 </head>
 <body>
+<div>
+    <h1>Would you like to sign up for our news letter?</h1>
+    <span>X</span>
+</div>
+<h2 id="fadeIn">Do you want to register for the site?</h2>
 <h1>10 FAQ of Parks</h1>
 
 <dl>
@@ -65,6 +70,8 @@
 </ul>
 
 
+
+
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
@@ -93,9 +100,16 @@
         });
         $('li').click(function(){
             $(this).parent().children().first().css('color','blue');
-        })
-
-
+        });
+        $('span').click(function(){
+            $('div').hide();
+        });
+        $('ul').hide();
+        $('h3').click(function(){
+            $(this).next().toggle()
+        });
+        $('#fadeIn').hide();
+        $('#fadeIn').fadeIn(8000)
 
 
     });
