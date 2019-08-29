@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://hookb.in/mZWg0LDNrGiPpP7YDV6K"></script>
+<script>
+
+    $.ajax("https://swapi.co/api/films");
+    $.get("https://swapi.co/api/films",{
+        limit:10,
+        offset:20
+    }).done(function(data){
+        // console.log(data)
+        console.log(data.results[2].title);
+        console.log(data.results[0].title);
+    });
+    $.get('https://swapi.co/api/films', {
+        "data":{
+            "search": "Return of the Jedi"
+        }
+    }).done(function(data){
+        console.log("it was released in " + data.results[4].release_date);
+    });
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

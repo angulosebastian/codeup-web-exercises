@@ -10,6 +10,17 @@
     </style>
 </head>
 <body>
+<style>
+    /*body{*/
+    /*    background-color: lightcoral;*/
+    /*}*/
+    /*dl{*/
+    /*    font-size: 20px;*/
+    /*}*/
+
+
+
+</style>
 <div>
     <h1>Would you like to sign up for our news letter?</h1>
     <span>X</span>
@@ -94,7 +105,7 @@
             })
         });
         $('h3').click(function(){
-            $('ul').each(function(index){
+            $(this).each(function(index){
                 $(this).children('li').css('font-weight','bold')
             })
         });
@@ -109,7 +120,8 @@
             $(this).next().toggle()
         });
         $('#fadeIn').hide();
-        $('#fadeIn').fadeIn(8000)
+        $('#fadeIn').delay(8000).fadeIn()
+
 
 
     });
