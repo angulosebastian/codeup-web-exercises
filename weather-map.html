@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>weather map</title>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weatherMap.css">
+    <link href="js/keys.js">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 <div class="container">
@@ -17,52 +18,84 @@
 <H3>San Antonio, TX</H3>
 
 <section id="weather2">
-<!--    <div class="card-group">-->
-<!--        <div class="card">-->
-<!--&lt;!&ndash;            <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title"> </h5>-->
-<!--                <p id="clouds" class="card-text">clouds</p>-->
-<!--                <p id="humidity" class="card-text">humidity</p>-->
-<!--                <p id="wind" class="card-text">wind</p>-->
-<!--                <p id="pressure" class="card-text">pressure</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="card">-->
-<!--            &lt;!&ndash;            <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title"> temputure</h5>-->
-<!--                <p id="clouds1" class="card-text">clouds</p>-->
-<!--                <p id="humidity2" class="card-text">humidity</p>-->
-<!--                <p id="wind2" class="card-text">wind</p>-->
-<!--                <p id="pressure2" class="card-text">pressure</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="card">-->
-<!--            &lt;!&ndash;            <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title"> temputure</h5>-->
-<!--                <p id="clouds3" class="card-text">clouds</p>-->
-<!--                <p id="humidity3" class="card-text">humidity</p>-->
-<!--                <p id="wind3" class="card-text">wind</p>-->
-<!--                <p id="pressure4" class="card-text">pressure</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
 </section>
 </div>
+<!--search bar-->
+<div id="search">
+<input rel="stylesheet"  placeholder="Latitude">
+<input rel="stylesheet" placeholder="Longitude">
+<button type="button"  >Search</button>
+</div>
+
+
+
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+
 <script src="js/jquery-2.2.4.js"></script>
 <script src="js/keys.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
-<script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
 
+<div id='map' style='width: 69%; height: 700px;'></div>
+
+<!-- FOR THE MAP -->
+<script>
+    mapboxgl.accessToken = mapboxToken ;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.491142, 29.424349]
+    });
+
+
+
+
+</script>
+<!-- WEATHER FORECAST-->
+<script>
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/29.424349, -98.491142").done(function (data) {
         console.log(data.currently.temperature);
         console.log(data);
         $('#weather2').append(buildHTML(data));
+
+        // var weatherIcon = [
+        //     {icon: 'clear-day', url:'climacons-master/SVG/Sun.svg'},
+        //     {icon: 'clear-night', url:'climacons-master/SVG/Moon.svg'},
+        //     {icon: 'rain', url:'climacons-master/SVG/Cloud-Drizzle.svg'},
+        //     {icon:'snow', url:'climacons-master/SVG/Cloud-Snow.svg'},
+        //     {icon: 'sleet', url:'climacons-master/SVG/Umbrella.svg'},
+        //     {icon: 'wind', url:'climacons-master/SVG/Wind.svg'},
+        //     {icon:'fog', url:'climacons-master/SVG/Cloud-Fog.svg'},
+        //     {icon:'cloudy', url:'climacons-master/SVG/Cloud.svg'},
+        //     {icon:'partly-cloudy-day', url:'climacons-master/SVG/Cloud-Fog-Sun.svg'},
+        //     {icon:'partly-cloudy-night', url:'climacons-master/SVG/Cloud-Fog-Moon.svg'}
+        // ];
+
+        function iconWeather(input){
+            var newArr=[];
+            var weatherIcon = [
+                {icon: 'clear-day', url:'climacons-master/SVG/Sun.svg'},
+                {icon: 'clear-night', url:'climacons-master/SVG/Moon.svg'},
+                {icon: 'rain', url:'climacons-master/SVG/Cloud-Drizzle.svg'},
+                {icon:'snow', url:'climacons-master/SVG/Cloud-Snow.svg'},
+                {icon: 'sleet', url:'climacons-master/SVG/Umbrella.svg'},
+                {icon: 'wind', url:'climacons-master/SVG/Wind.svg'},
+                {icon:'fog', url:'climacons-master/SVG/Cloud-Fog.svg'},
+                {icon:'cloudy', url:'climacons-master/SVG/Cloud.svg'},
+                {icon:'partly-cloudy-day', url:'climacons-master/SVG/Cloud-Fog-Sun.svg'},
+                {icon:'partly-cloudy-night', url:'climacons-master/SVG/Cloud-Fog-Moon.svg'}
+            ];
+            weatherIcon.forEach(function(data) {
+                if (input === data.icon){
+                    newArr.push(data.url)
+                }
+            });
+            return newArr
+        };
+
         function buildHTML (orders){
 
             var weather = "";
@@ -73,46 +106,17 @@
                 weather +="<div class=\"card-group\">";
                 weather +="<div class=\"card\">";
                 weather +="<h5>"+ day.apparentTemperatureHigh+ "° fahrenheit</h5>";
+                weather +="<img src=" + iconWeather(orders.daily.data[i].icon)+ ">";
                 weather +="<p >Clouds: "+ day.cloudCover+" cloud clover</p>";
                 weather +="<p > Humidity: "+ day.humidity+" </p>";
-                weather +="<p >Wind: "+ day.windSpeed + "</p>"
-                weather +="<p > Pressure: "+ day.pressure +" </p>"
-                weather +="</section>"
-
-
+                weather +="<p >Wind: "+ day.windSpeed + "</p>";
+                weather +="<p > Pressure: "+ day.pressure +" </p>";
+                weather +="</section>";
             }
             return weather
         }
-        var weatherOutside = ['clear-day','clear-night','rain','snow','sleet','wind','fog','cloudy','partly-cloudy-day','partly-cloudy-night'];
 
-        function weatherIcon(input){
-            if( input === weatherOutside[0]){
-                return "climacons-master/SVG/sun.svg"
-            }else if (input === weatherOutside[1]){
-                return "climacons-master/SVG/Moon.svg"
-            }else if(input ===weatherOutside[2]){
 
-            }else if(input===weatherOutside[3]){
-
-            }else if(input === weatherOutside[4]){
-
-            }else if(input === weatherOutside[5]){
-
-            }else if(input === weatherOutside[6]){
-
-            }else if (input === weatherOutside[7]){
-
-            }else if (input === weatherOutside[8]){
-
-            }else if (input === weatherOutside[9]){
-
-            }else{
-
-            }
-
-        }
-        console.log(weatherIcon('clear-day'))
-        console.log(weatherIcon('clear-night'))
 
 
 
@@ -122,5 +126,7 @@
     // console.log(dateObject.toString());
 
 </script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
+
 </body>
 </html>

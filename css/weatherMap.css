@@ -13,3 +13,10 @@ body{
     flex-grow: 1;
 
 }
+#map{
+
+    margin-left: 14em;
+}
+#id{
+    margin-left: 14em;
+}
